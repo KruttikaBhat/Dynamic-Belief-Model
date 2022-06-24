@@ -1,0 +1,24 @@
+1. Applied DBM model to 3 datasets.
+	a) valid/invalid/nochange/cue variables
+	b) Event ('respEvent'), RA1 ('respRA1'), RA2 ('respRA2') logic
+	c) No RT normalisation ('') and a (divide by subject mean-then-log) normalisation ('normDivideByMeanThenLog')
+	c) Obtained plots that compared
+		i) DBM 'r' with d'/cc-val/inv ('corr_pred') 
+		ii) DBM 'r' with delta d'/cc-val/inv ('corr_pred...delta...')
+		iii) delta DBM 'r' with delta d'/cc ('corr_pred-delta...delta...')
+	d) DBM models are saved ('compareGridbest...')
+
+2. Additional analysis for tACS dataset:
+	a) Accuracy model. Here the correlation is taken between DBM predicted probability and accuracy instead of RT. ('Accuracy' is included in all related results)
+	b) Subject choice repetition alternation model. A single variable of subject's choice repeating or not is modeled with DBM. ('choiceRA')
+	c) DBM 'r' is found only for when the event occured (event=1) ('rForEvent1'). DBM model itself is the same but now r values will be different.
+	d) DBM 'r' of valid variable is plotted against DBM 'r' of invalid variable ('corr_pred...invVal_DBMr'), only for Event based logic.
+	e) Sequences of vectors are plotted against average DBM predicted probability of last trial in the sequence (1-predicted probability for RT models) ('gridbest_seq_effects...DBM_pred...').
+	f) Sequences of vectors are plotted against average RT/accuracy of last trial in the sequence ('gridbest_seq_effects...RT...' or 'seq_effects').
+	g) DBM 'r' is plotted in ascending order. ('RT_corr_compareGridbest')
+
+3. Combined datasets: Obtained plots that compared
+	i) DBM 'r' with d'/cc-val/inv ('corr_pred') 
+	ii) DBM 'r' with delta d'/cc-val/inv ('corr_pred...delta...')
+	iii) delta DBM 'r' with delta d'/cc ('corr_pred-delta...delta...')
+	iv) DBM 'r' with average of d' valid and d' invalid ('corr_pred...avg...')		
